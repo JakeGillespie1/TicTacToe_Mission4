@@ -38,7 +38,36 @@ Console.WriteLine("Done");
 do
 {
     /*Ask for the 2 players moves and update the game board array*/
-    
+    bool validMove = false;
+    /*Player X is True and Player O is False*/
+    bool playerMove = true;
+
+    do
+    {
+        /*Which player is going?*/
+        if (playerMove == true)
+        {
+            Console.WriteLine($"{playerX} what quadrant would you like to place your move in (0-9)?");
+        }
+        if (playerMove == false)
+        {
+            Console.WriteLine($"{playerX} what quadrant would you like to place your move in (0-9)?");
+        }
+
+        /*Is the selected quadrant already full?*/
+        for (int i = 0;i < boardArray.Length;i++)
+        {
+            if (boardArray[i] != "_")
+            {
+                Console.WriteLine("That spot has already been taken");
+            }
+            else
+            {
+                validMove = true;
+                /*Print board...*/
+            }
+        }
+    } while (!validMove);
 
 
 
