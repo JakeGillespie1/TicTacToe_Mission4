@@ -78,3 +78,21 @@ do
 /*Call the supporting class method to print board*/
 
 /*Check for a winner by calling class method*/
+
+/*// this is just a plan 
+// 1) create an instance of the support class
+Support supportInstance = new Support();
+
+//2)  Check for a winner using the method in the Support class
+// i will initialize currentPlayer to keep track of who is playing 
+string currentPlayer = "";
+if (supportInstance.CheckForWinner(boardArray)) // checkforwinner is the method name
+{
+    Console.WriteLine($"{currentPlayer} wins!");
+    gameOver = true;
+}
+while (!gameOver) ;
+
+// Print the final state of the game board
+supportInstance.PrintBoard(boardArray); // printboard will be changed but it references the other class. */
+
