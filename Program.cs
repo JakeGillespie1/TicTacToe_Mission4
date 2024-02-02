@@ -28,12 +28,35 @@ class Program
             while (!gameEnded)
             {
                 Support.PrintBoard(board);
+                bool validInput = false;
+                int row = -1;
+                int col = -1;
 
-                Console.Write($"Player {currentPlayer}, enter your move (row and column separated by a space:");
-                string[] input = Console.ReadLine().Split();
-                int row = int.Parse(input[0]) - 1;
-                int col = int.Parse(input[1]) - 1;
+                while(!validInput)
+                {
+                    Console.Write($"Player {currentPlayer}, enter your move (row and column separated by a space:");
+                    string[] input = Console.ReadLine().Split();
 
+
+                    try
+                    {
+                        row = int.Parse(input[0]) - 1;
+                        col = int.Parse(input[1]) - 1;
+
+                        validInput = true;
+                        if (input.Length > 2)
+                        {
+                            validInput = false;
+                            Console.WriteLine("Please enter just two numbers, separated by a space");
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Please enter row and column number separated by a space");
+                    }
+                }
+
+             
                 if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row, col] == ' ')
                 {
                     board[row, col] = currentPlayer;
