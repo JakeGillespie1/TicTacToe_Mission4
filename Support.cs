@@ -23,7 +23,7 @@ namespace TicTacToe_Mission4
                 Console.WriteLine();
                 if (row <2) 
                 {
-                    Console.WriteLine("-------------");
+                    Console.WriteLine("-----------");
                 }
             }
         }
