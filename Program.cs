@@ -37,7 +37,6 @@ class Program
                     Console.Write($"Player {currentPlayer}, enter your move (row and column separated by a space:");
                     string[] input = Console.ReadLine().Split();
 
-
                     try
                     {
                         row = int.Parse(input[0]) - 1;
