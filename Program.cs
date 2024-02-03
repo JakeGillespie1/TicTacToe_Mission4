@@ -33,6 +33,7 @@ class Program
 
                 while(!validInput)
                 {
+                    // splits the coordinates, and sets it back by 1 because arrays start with 0
                     Console.Write($"Player {currentPlayer}, enter your move (row and column separated by a space:");
                     string[] input = Console.ReadLine().Split();
 
@@ -54,14 +55,6 @@ class Program
                         Console.WriteLine("Please enter row and column number separated by a space");
                     }
                 }
-
-             
-                if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row, col] == ' ')
-                Console.Write($"Player {currentPlayer}, enter your move (row and column separated by a space:");
-                // allow users to enter the coordinates for the letters
-                string[] input = Console.ReadLine().Split(); // splits the coordinates, and sets it back by 1 because arrays start with 0
-                int row = int.Parse(input[0]) - 1;
-                int col = int.Parse(input[1]) - 1;
 
                 if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row, col] == ' ') 
                     // checks to make sure the user put in a valid coordinate, and ensures that there is an empty space
