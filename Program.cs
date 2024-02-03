@@ -34,7 +34,7 @@ class Program
                 while(!validInput)
                 {
                     // splits the coordinates, and sets it back by 1 because arrays start with 0
-                    Console.Write($"Player {currentPlayer}, enter your move (row and column separated by a space:");
+                    Console.Write($"Player {currentPlayer}, enter your move (row and column separated by a space):");
                     string[] input = Console.ReadLine().Split();
 
                     // check to make sure that the user put numbers and not letters
